@@ -1,0 +1,24 @@
+{{ 'new-hero-section.css' | asset_url | stylesheet_tag }}
+
+<div class='container'>{{ section.settings.hero_text }}</div>
+
+{% schema %}
+{
+  "name": "new hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_text",
+      "label": "Hero text"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "new hero"
+    }
+  ]
+}
+{% endschema %}
